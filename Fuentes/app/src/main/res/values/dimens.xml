@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tituloIngreso">15sp</dimen>
+    <dimen name="marginTopTitulos">10dp</dimen>
+    <dimen name="editTextIngresos">30dp</dimen>
+    <dimen name="txtSizeLp">20sp</dimen>
+    <dimen name="margin_left_prod">30dp</dimen>
+    <dimen name="viewTextIngresados">25sp</dimen>
+    <dimen name="marginTop10dp">10dp</dimen>
+</resources>

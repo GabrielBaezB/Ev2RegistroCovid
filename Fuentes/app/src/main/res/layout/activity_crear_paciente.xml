@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CrearPacienteActivity">
+    <include layout="@layout/toolbar"/>
+    <!-- Rut Paciente-->
+    <TextView
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:text="Rut Del Paciente"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/tituloIngreso"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/crearRutTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- Nombre Paciente-->
+    <TextView
+        android:text="Nombre Del Paciente"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/tituloIngreso"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/crearNameTxt"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- Apellido Paciente-->
+    <TextView
+        android:text="Apellido Del Paciente"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/tituloIngreso"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/crearLastTxt"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!-- Fecha de Test Paciente-->
+    <TextView
+        android:text="Fecha de Registro"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/tituloIngreso"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/crearDateTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"/>
+    <!-- Area de Trabajo Paciente-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="268dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Area de Trabajo"
+            android:textSize="@dimen/tituloIngreso" />
+        <Spinner
+            android:id="@+id/crearAreaTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+    </LinearLayout>
+    <!-- Sintomas del Paciente-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/tituloIngreso"
+            android:text="Presenta Sintomas el Paciente"
+            android:layout_weight="1">
+        </TextView>
+        <Switch
+            android:id="@+id/crearSintomasTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+    </LinearLayout>
+    <!-- Temperatura del Paciente-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="251dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Temperatura Del Paciente"
+            android:textSize="@dimen/tituloIngreso" />
+
+        <EditText
+            android:id="@+id/crearTemperaturaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+    <!-- Presenta Tos el Paciente-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Presenta Tos el Paciente"
+            android:textSize="@dimen/tituloIngreso" />
+    <Switch
+        android:id="@+id/crearTosTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
+    </LinearLayout>
+    <!-- Presion Arterial del Paciente-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="593dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Presion Arterial Del Paciente"
+            android:textSize="@dimen/tituloIngreso" />
+    <EditText
+        android:id="@+id/crearPresionTxt"
+        android:inputType="number"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:text="Registrar"
+        android:layout_marginTop="@dimen/marginTopTitulos"
+        android:textSize="@dimen/tituloIngreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
