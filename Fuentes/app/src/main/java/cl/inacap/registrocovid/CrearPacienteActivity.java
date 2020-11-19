@@ -188,7 +188,7 @@ public class CrearPacienteActivity extends AppCompatActivity {
 
                 pacientesDAO.save(p);
 
-                startActivity(new Intent(CrearPacienteActivity.this, MainActivity.class));
+                startActivity(new Intent(CrearPacienteActivity.this, PrincipalActivity.class));
             }else{
                     mostrarErrores(errores);
                 }

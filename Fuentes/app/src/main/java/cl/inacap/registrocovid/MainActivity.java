@@ -1,72 +1,66 @@
 package cl.inacap.registrocovid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.os.Bundle;
-
-import java.util.List;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import cl.inacap.registrocovid.adapters.PacientesListAdapter;
-import cl.inacap.registrocovid.dao.PacientesDAO;
-import cl.inacap.registrocovid.dao.PacientesDAOSQLite;
-import cl.inacap.registrocovid.dto.Paciente;
+import static cl.inacap.registrocovid.CrearPacienteActivity.validarRut;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Paciente> pacientes;
-    private PacientesDAO pacientesDAO= new PacientesDAOSQLite(this);
-    private ListView pacientesListView;
-    private FloatingActionButton addBtn;
-    private PacientesListAdapter adapter;
+    private EditText idUsuario, passUsuario;
+    private Button btnLoginUser;
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
-
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
-        this.pacientes = this.pacientesDAO.getAll();
-        this.pacientesListView =  findViewById(R.id.pacientes_lv);
-        this.adapter = new PacientesListAdapter(this, R.layout.lista_pacientes, this.pacientes);
-        this.pacientesListView.setAdapter(this.adapter);
-        this.pacientesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Paciente paciente = pacientes.get(position);
-                Intent intent = new Intent(MainActivity.this, PacienteViewActivity.class);
-                intent.putExtra("paciente", paciente);
-
-
-                startActivity(intent);
-
-            }
-        });
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
-        this.addBtn = findViewById(R.id.btn_add_float);
-        this.addBtn.setOnClickListener(new View.OnClickListener() {
+        this.idUsuario = findViewById(R.id.txtIngreso);
+        this.passUsuario = findViewById(R.id.txtPassword);
+        this.btnLoginUser = findViewById(R.id.login_btn);
+
+        btnLoginUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent position = new Intent(MainActivity.this, CrearPacienteActivity.class);
-                startActivity(position);
+
+                String user =  idUsuario.getText().toString().trim();
+
+                if (user.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Ingrese nombre de Usuario"
+                            , Toast.LENGTH_SHORT).show();
+                }else{
+                    String rutValidado = user;
+                    if (validarRut(rutValidado) == false){
+                        Toast.makeText(MainActivity.this, "Ingrese una Cuenta Valida"
+                                , Toast.LENGTH_SHORT).show();
+                    }
+
+                    int digitos = user.length();
+                    String cuatroDigitos = user.substring(digitos -5,digitos-1);
+                      if(cuatroDigitos.equalsIgnoreCase(cuatroDigitos)) {
+                        Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
+                        startActivity(intent);
+
+                    }else{
+                        Toast.makeText(MainActivity.this, "Cuenta Invalida", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+
+
             }
         });
+
     }
 }
