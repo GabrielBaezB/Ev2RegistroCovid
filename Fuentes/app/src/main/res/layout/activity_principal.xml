@@ -13,6 +13,7 @@
         android:id="@+id/toolbarP"></include>
 
     <ListView
+
         android:layout_below="@+id/toolbarP"
         android:id="@+id/pacientes_lv"
         android:layout_width="match_parent"

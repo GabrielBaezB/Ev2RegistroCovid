@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:layout_margin="@dimen/marginTopTitulos"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -13,27 +14,28 @@
 
         <TextView
             android:id="@+id/rut_paciente_lp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/txtSizeLp"></TextView>
 
         <TextView
             android:id="@+id/nombre_paciente_lp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/txtSizeLp"></TextView>
 
         <TextView
             android:id="@+id/fecha_paciente_lp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/txtSizeLp"></TextView>
     </LinearLayout>
 
         <ImageView
             android:id="@+id/imgIcons"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:layout_gravity="center" />
 </LinearLayout>
 

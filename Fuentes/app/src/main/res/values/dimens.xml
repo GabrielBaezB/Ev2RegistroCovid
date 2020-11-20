@@ -7,4 +7,5 @@
     <dimen name="margin_left_prod">30dp</dimen>
     <dimen name="viewTextIngresados">25sp</dimen>
     <dimen name="marginTop10dp">10dp</dimen>
+    <dimen name="LisViewMarginTop">30dp</dimen>
 </resources>

@@ -52,7 +52,7 @@ public class PacienteViewActivity extends AppCompatActivity {
                 this.sintomasView.setText("no");
             }
 
-            this.temperaturaView.setText(String.format("%.02f", paciente.getTemperatura()));
+            this.temperaturaView.setText(String.format("%.01f", paciente.getTemperatura()));
 
             if (paciente.getTos()){
                 this.tosView.setText("si");

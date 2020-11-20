@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import cl.inacap.registrocovid.R;
@@ -42,6 +44,18 @@ public class PacientesListAdapter extends ArrayAdapter<Paciente> {
         rutCl.setText("Rut: "+ actual.getRut());
         nombreCl.setText("Nombre: "+actual.getNombre()+" "+ actual.getApellido());
         fechaCl.setText("Fecha: "+actual.getFecha());
+
+        if(actual.getSintomas() == true){
+            Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXMcEJ4qVy1-F8Ni69Wb-UB_kBs7Zz91jQWw&usqp=CAU")
+                    .resize(300, 300)
+                    .centerCrop()
+                    .into(icono);
+        }else if (actual.getSintomas()==false){
+            Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzLmDoWS-q5B9ejjSO3f9yGb-iBGo-cX6laA&usqp=CAU")
+                    .resize(300, 300)
+                    .centerCrop()
+                    .into(icono);
+        }
 
         return fila;
     }

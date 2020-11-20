@@ -5,51 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CrearPacienteActivity">
+    tools:context=".CrearPacienteActivity"
+    android:background="@color/colorPrimaryLight">
     <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/marginTopTitulos">
     <!-- Rut Paciente-->
     <TextView
-        android:layout_marginTop="@dimen/marginTopTitulos"
+
         android:text="Rut Del Paciente"
         android:layout_width="wrap_content"
         android:textSize="@dimen/tituloIngreso"
+        android:textColor="@color/primaryText"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/crearRutTxt"
+        android:background="@color/textIcons"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/editTextIngresos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <!-- Nombre Paciente-->
     <TextView
+        android:layout_marginTop="@dimen/marginTopTitulos"
         android:text="Nombre Del Paciente"
         android:layout_width="wrap_content"
         android:textSize="@dimen/tituloIngreso"
+        android:textColor="@color/primaryText"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/crearNameTxt"
-        android:inputType="text"
+        android:background="@color/textIcons"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/editTextIngresos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <!-- Apellido Paciente-->
     <TextView
+        android:layout_marginTop="@dimen/marginTopTitulos"
         android:text="Apellido Del Paciente"
         android:layout_width="wrap_content"
         android:textSize="@dimen/tituloIngreso"
+        android:textColor="@color/primaryText"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/crearLastTxt"
+        android:background="@color/textIcons"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/editTextIngresos"
         android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <!-- Fecha de Test Paciente-->
     <TextView
+        android:layout_marginTop="@dimen/marginTopTitulos"
         android:text="Fecha de Registro"
         android:layout_width="wrap_content"
         android:textSize="@dimen/tituloIngreso"
+        android:textColor="@color/primaryText"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/crearDateTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/textIcons"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/editTextIngresos"
         android:inputType="date"
         android:focusable="false"
         android:clickable="true"
@@ -62,12 +86,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="268dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Area de Trabajo"
+            android:textColor="@color/primaryText"
             android:textSize="@dimen/tituloIngreso" />
         <Spinner
+            android:backgroundTint="@color/primaryText"
             android:id="@+id/crearAreaTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,6 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="@dimen/tituloIngreso"
+            android:textColor="@color/primaryText"
             android:text="Presenta Sintomas el Paciente"
             android:layout_weight="1">
         </TextView>
@@ -97,17 +124,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopTitulos"
+        android:textColor="@color/primaryText"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="251dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textColor="@color/primaryText"
             android:text="Temperatura Del Paciente"
             android:textSize="@dimen/tituloIngreso" />
 
         <EditText
             android:id="@+id/crearTemperaturaTxt"
+            android:background="@color/textIcons"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/editTextIngresos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -124,6 +156,7 @@
             android:layout_width="203dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textColor="@color/primaryText"
             android:text="Presenta Tos el Paciente"
             android:textSize="@dimen/tituloIngreso" />
     <Switch
@@ -143,12 +176,16 @@
             android:layout_width="593dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textColor="@color/primaryText"
             android:text="Presion Arterial Del Paciente"
             android:textSize="@dimen/tituloIngreso" />
     <EditText
         android:id="@+id/crearPresionTxt"
         android:inputType="number"
         android:layout_weight="1"
+        android:background="@color/textIcons"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/editTextIngresos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -158,7 +195,8 @@
         android:text="Registrar"
         android:layout_marginTop="@dimen/marginTopTitulos"
         android:textSize="@dimen/tituloIngreso"
+        android:background="@drawable/borde_redondo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
+    </LinearLayout>
 </LinearLayout>

@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PacienteViewActivity">
+    tools:context=".PacienteViewActivity"
+    android:background="@color/colorPrimaryLight">
 
     <include layout="@layout/toolbar"/>
 
     <LinearLayout
+        android:background="@color/colorPrimaryLight"
         android:orientation="vertical"
         android:padding="10dp"
         android:layout_width="match_parent"
@@ -17,26 +19,31 @@
 
         <!-- RutPaciente-->
         <TextView
+            android:textColor="@color/primaryText"
             android:text="RUT Del Paciente"
             android:layout_marginTop="@dimen/marginTopTitulos"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/primaryText"
+            android:background="@color/textIcons"
             android:id="@+id/rut_paciente_view"
             android:textSize="@dimen/viewTextIngresados"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <!--Nombre Completo del paciente -->
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Nombre del Paciente"
             android:layout_marginTop="@dimen/marginTopTitulos"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/primaryText"
+            android:background="@color/textIcons"
           android:id="@+id/nombre_paciente_view"
           android:textSize="@dimen/viewTextIngresados"
           android:gravity="center"
@@ -45,12 +52,15 @@
 
         <!-- Fecha de Ingreso-->
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Fecha de Examen"
             android:layout_marginTop="@dimen/marginTopTitulos"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/primaryText"
+            android:background="@color/textIcons"
             android:textSize="@dimen/viewTextIngresados"
             android:id="@+id/fecha_paciente_view"
             android:layout_width="match_parent"
@@ -58,12 +68,15 @@
 
         <!--Area de Trabajo-->
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Area de trabajo del Paciente"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_marginTop="@dimen/marginTopTitulos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/primaryText"
+            android:background="@color/textIcons"
             android:textSize="@dimen/viewTextIngresados"
             android:id="@+id/area_paciente_view"
             android:layout_width="match_parent"
@@ -71,17 +84,19 @@
     </LinearLayout>
         <!--Sintomas-->
     <LinearLayout
+            android:background="@color/colorPrimaryLight"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-             <TextView
+             <TextView android:textColor="@color/primaryText"
             android:text="Presenta Sintomas?"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
             <TextView
+                android:background="@color/textIcons"
                 android:id="@+id/sintoma_paciente_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,17 +105,20 @@
         </LinearLayout>
         <!--Presenta Tos-->
     <LinearLayout
+        android:background="@color/colorPrimaryLight"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Presenta Tos?"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <TextView
+            android:background="@color/textIcons"
             android:id="@+id/tos_paciente_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,17 +128,20 @@
 
         <!--Temperatura-->
     <LinearLayout
+        android:background="@color/colorPrimaryLight"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Temperatura"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <TextView
+            android:background="@color/textIcons"
             android:id="@+id/temperatura_paciente_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,17 +151,20 @@
 
         <!--Presion arterial-->
     <LinearLayout
+        android:background="@color/colorPrimaryLight"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:textColor="@color/primaryText"
             android:text="Presion Arterial"
             android:textSize="@dimen/viewTextIngresados"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <TextView
+            android:background="@color/textIcons"
             android:id="@+id/presion_paciente_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
