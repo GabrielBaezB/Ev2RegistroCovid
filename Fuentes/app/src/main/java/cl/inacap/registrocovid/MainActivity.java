@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String user = idUsuario.getText().toString().trim();
                 String pass = passUsuario.getText().toString().trim();
-                //obtener el largo del rut
-                int digitosUser = user.length();
-                //obtener los ultimos 4 digitos del rut sin digito verificador
-                String passUser = user.substring(digitosUser -6, digitosUser-2);
-                int guion = user.indexOf(digitosUser-1);
+                
               if (!user.isEmpty()){
+                  //obtener el largo del rut
+                  int digitosUser = user.length();
+                  //obtener los ultimos 4 digitos del rut sin digito verificador
+                  String passUser = user.substring(digitosUser -6, digitosUser-2);
+                  int guion = user.indexOf(digitosUser-1);
                   if (!pass.isEmpty()){
                       //validar rut
                       if (validarRut(user) && user.contains("-")){
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
               } else{
                   Toast.makeText(MainActivity.this, "Ingrese nombre de Usuario", Toast.LENGTH_SHORT).show();
               }
-              
+
             }
         });
     }
